@@ -143,7 +143,7 @@ export default {
       }
     },
     timestampValue(value, format) {
-      let timestamp = moment(value);
+      let timestamp = moment.utc(value);
 
       if (format != "relative") {
         return timestamp.format(format);
